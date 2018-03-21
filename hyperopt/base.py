@@ -49,7 +49,7 @@ from .exceptions import (
 from .utils import pmin_sampled
 from .utils import use_obj_for_literal_in_memo
 from .vectorize import VectorizeHelper
-from .fmin import fmin as fmin_function
+
 
 __authors__ = "James Bergstra"
 __license__ = "3-clause BSD License"
@@ -624,7 +624,7 @@ class Trials(object):
         # -- Stop-gap implementation!
         #    fmin should have been a Trials method in the first place
         #    but for now it's still sitting in another file.
-        
+        from .fmin import fmin as fmin_function
         return fmin_function(
             fn, space, algo, max_evals,
             trials=self,

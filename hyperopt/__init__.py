@@ -18,7 +18,7 @@ from .base import Trials
 from .base import trials_from_docs
 from .base import Domain
 
-from .fmin import fmin
+from .fmin import fmin and fmin_function
 from .fmin import fmin_pass_expr_memo_ctrl
 from .fmin import FMinIter
 from .fmin import partial
